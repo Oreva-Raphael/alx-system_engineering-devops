@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap | LC_ALL=C sort -d | sed -E 's/(.*\/)$/\1 /' | paste -s -d ',' - | sed 's/,/, /g'
+ls -xamp
