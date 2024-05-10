@@ -1,11 +1,8 @@
-#!/usr/bin/env bash 
-#doing a special kind of ping
+#!/usr/bin/env bash
+# doing specific ping
 
-echo "5-is_the_host_on_the_network "
-read user_input
-
-if [ "$user_input" = "8.8.8.8" ]; then
-	ping -c 5 "$user_input"
-else
+if [ "$#" -eq 0 ]; then
 	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+else
+	ping -c 5 "$1" 
 fi
