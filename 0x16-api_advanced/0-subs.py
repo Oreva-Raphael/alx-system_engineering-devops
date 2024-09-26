@@ -14,9 +14,9 @@ def number_of_subscribers(subreddit):
         return 0
 
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    user_agent = {'User-Agent': 'Arc Chromium Engine Version 129.0.6668.59'}
+    user_agent = {'User-Agent': 'Arc Version 1.61.0 (53949)'}
     response = get(url, headers=user_agent)
-    results = response.json
+    results = response.json()
 
     try:
         return results.get('data').get('subscribers')
